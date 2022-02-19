@@ -44,7 +44,7 @@ export const LoadingPage = styled.div`
 }
 `;
 
-export const Card1 = styled.div`
+export const Card = styled.div`
   width:32.5%;
   height:450px;
   padding:4px;

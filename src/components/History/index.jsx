@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { getHistoryAction } from "../../redux/modules/history/HistoryAction";
-import { Card1, HistoryPage, LoadingPage, Text } from "./style";
+import { Card, HistoryPage, LoadingPage, } from "./style";
 
 function History() {
   const dispatch = useDispatch();
@@ -13,8 +13,10 @@ function History() {
     dispatch(getHistoryAction());
   }, []);
   return (
+    // History
     <HistoryPage>
       {loading && (
+        // loading
         <LoadingPage>
           <div className="loading">
             <div></div>
@@ -26,11 +28,13 @@ function History() {
       {success && "Success"}
       {error && "Error"}
       {productL?.data?.map(({ id, createdAt, productList },index) => (
-        <Card1 key={id}>
+        // cart
+        <Card key={id}>
          <div className="top">
          {/* <p>{index +1}</p> */}
           <img src="https://cdn-icons.flaticon.com/png/512/3145/premium/3145827.png?token=exp=1645032717~hmac=105000dcaa734794058c893f373bbe64" />
          </div>
+         {/* table */}
           <table>
             <tr>
               <th>id</th>
@@ -57,7 +61,7 @@ function History() {
             )}
           </table>
           <p className="purchase">Thank you for your purchase</p>
-        </Card1>
+        </Card>
       ))}
     </HistoryPage>
   );

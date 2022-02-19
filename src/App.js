@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './App.css';
 import MainPages from './MainPage';
 import LoginForm from './components/loginForm/LoginForm';
-import Logout from './assets/image/logout.png'
+
 import { AppLogin } from './components/loginForm/style';
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
           <MainPages />
           <AppLogin>
             <div className='btn-log'  onClick={logout}>
-            <img src={Logout} />
+            <img src="https://image.flaticon.com/icons/png/512/891/891391.png?w=740" />
             <button>Logout</button>
 
             </div>

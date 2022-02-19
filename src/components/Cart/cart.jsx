@@ -5,9 +5,9 @@ import {
   decrement,
   increment,
   removeFromCart,
-} from "../../redux/modules/cart/Cart.Action";
+} from "../../redux/modules/cart/CartAction";
 import { Link } from "react-router-dom";
-import { Button, CartWrapper, Cl, Table } from "./style";
+import { Button, CartWrappers, Cl, Table } from "./style";
 function Cart() {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
@@ -31,11 +31,13 @@ function Cart() {
     })
 
   };
-  // https://store-management-backend-app.herokuapp.com/api/v1/sale/sold
+
   return (
     <>
-      <CartWrapper>
+    {/* Cartwrappers */}
+      <CartWrappers>
         <div className="table-cart">
+          {/* table */}
           <Table>
             <tr>
               <th>Photo</th>
@@ -85,14 +87,14 @@ function Cart() {
             )}
           </Table>
         </div>
-        <div className="price-cart">
-          <div className="txt-cart">
+        <div className="priceCart">
+          <div className="textCart">
             <h1>Price</h1>
             <Link to="/products" className="out">
               Out
             </Link>
           </div>
-          <div className="sub">
+          <div className="submit">
             <p>Tax:10%</p>
             <p>Total:{cart.reduce((t, v) => t + v.chosen, 0)}</p>
             <p>
@@ -100,13 +102,13 @@ function Cart() {
             </p>
           </div>
           <Cl>
-            <div className="btn-left">
+            <div className="buttonLeft">
               <Button onClick={() => dispatch({ type: "CLEAN" })}>Clean</Button>
               <button onClick={sellProducts()}>Sell</button>
             </div>
           </Cl>
         </div>
-      </CartWrapper>
+      </CartWrappers>
     </>
   );
 }

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import { ProductWrapper,LoadingPage } from "./style";
-import { getProductAction } from "../../redux/modules/GetProduct/getProdcuct.Action";
+import { getProductAction } from "../../redux/modules/GetProduct/getProdcuctAction";
 import { useDispatch, useSelector } from "react-redux";
 import Add from "../Update Cart";
-import { addToCart } from "../../redux/modules/cart/Cart.Action";
+import { addToCart } from "../../redux/modules/cart/CartAction";
 
 function ProductPage() {
   const dispatch = useDispatch();

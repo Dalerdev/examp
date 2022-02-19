@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CartWrapper=styled.div`
+export const CartWrappers=styled.div`
   width:82%;
   height:90vh;
   padding:10px;
@@ -19,7 +19,7 @@ export const CartWrapper=styled.div`
     margin-left:20px;
 
   }
-  .price-cart{
+  .priceCart{
     width:23%;
     height:300px;
     margin-right:10px;
@@ -31,12 +31,12 @@ export const CartWrapper=styled.div`
     padding:15px;
     z-index:999;
     position:fixed;
-    .txt-cart{
+    .textCart{
       display:flex;
       justify-content:space-between;
       h1{
       font-weight:700;
-      font-family:'Poppins',sans-serif;
+      font-family:sans-serif;
       color:black;
       margin-left:20px;
     }
@@ -49,7 +49,7 @@ export const CartWrapper=styled.div`
     }
     }
 
-    .sub{
+    .submit{
       margin-top:30px;
       margin-left:20px;
       line-height:28px;
@@ -66,7 +66,7 @@ export const Cl =styled.div`
         width: 100%;
         display:flex;
         margin-top:50px;
-    .btn-left{
+    .buttonLeft{
         width:150px;
         height:40px;
         display:flex;
